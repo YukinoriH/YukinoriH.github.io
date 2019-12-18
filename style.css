@@ -11,9 +11,16 @@ a {
 }
 
 ul {
+    list-style-type: none;
+}
+
+li {
+    text-decoration: none;
+}
+
+.headList {
   background-color: black;
   position: static;
-  list-style-type: none;
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   grid-gap: 5%;
@@ -23,11 +30,10 @@ ul {
   transition: all 0.2s;
 }
 
-li {
+.headElem {
   display: block;
   color: white;
   grid-column-start: auto;
-  text-decoration: none;
 }
 
 .changeTextBtn {
@@ -49,14 +55,81 @@ li {
   cursor: pointer;
 }
 
-.content{
+.projectContent{
+  animation: pageTransition 600ms;
+  animation-timing-function: ease-in-out;
+  display: grid;
+  grid-template-columns: 5% 10% auto 10% 5%;
+  grid-template-rows: 20px 50px 50px auto 90px;
+}
+
+.projectHead{
+  color: white;
+  font-size: 3.0em;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  align-self: center;
+  justify-self: center;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+
+.projectSub{
+  color: white;
+  font-size: 1.5em;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  align-self: center;
+  justify-self: center;
+  grid-row-start: 3;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+
+.projectList{
+  align-self: center;
+  grid-row-start: 4;
+  grid-column-start: 3;
+}
+
+.projectBlock{
+  border-style: solid;
+  border-width: 5px;
+  border-color: white;
+  margin-top: 5%;
+  grid-column-start: auto;
+  font-size: 0em;
+  transition: 200ms;
+  transition-timing-function: ease-in-out;
+  transition-property: font-size,transform;
+}
+
+.projectBlock:hover {
+  transform: scale(1.2,1.2);
+    font-size: 1.5em;
+}
+
+.projectPic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.projectDesc{
+  color: white;
+  text-align: center;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+
+.aboutContent{
   animation: pageTransition 500ms;
   animation-timing-function: ease-in;
   display: grid;
   grid-template-columns: 5% 30% 60% 5%;
   grid-template-rows: 5% 45% 45% 5%%;
 }
-
 
 .aboutText{
   color: white;
@@ -81,6 +154,15 @@ li {
 .headshot{
   align-self: center;
   justify-self: center;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  grid-column-start: 2;
+}
+
+.headshot_about{
+  align-self: center;
+  justify-self: center;
+  margin-top: 10%;
   grid-row-start: 2;
   grid-row-end: 2;
   grid-column-start: 2;
@@ -124,7 +206,7 @@ li {
 @keyframes pageTransition {
   from{
     opacity: 0;
-    transform: translatey(-8%);
+    transform: translatey(-5%);
   }
   to{
     opacity: 1;
