@@ -1,5 +1,5 @@
 body {
-  background-image: linear-gradient(to bottom, #030303 , #250250 );
+  background-image: linear-gradient(to bottom, #082E4B , #0B93F9);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -7,7 +7,7 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  color: inherit;
 }
 
 ul {
@@ -23,20 +23,18 @@ li {
 footer {
   position: fixed;
   width: 100%;
-  height: 5%;
+  height: 10%;
   left: 0;
   bottom: 0;
   background-color: black;
-  color: white;
 }
 
 .headList {
   background-color: black;
-  position: static;
   display: grid;
   grid-template-columns: 20% 20% 20% 20%;
   grid-gap: 5%;
-  grid-template-rows: 50px;
+  grid-template-rows: 60px;
   justify-items: center;
   overflow: hidden;
   transition: all 0.2s;
@@ -49,6 +47,7 @@ footer {
   display: block;
   color: white;
   grid-column-start: auto;
+  align-self: center;
 }
 
 .changeTextBtn {
@@ -134,10 +133,10 @@ footer {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
-
 .aboutContent{
   animation: pageTransition 500ms;
   animation-timing-function: ease-in;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   display: grid;
   grid-template-columns: 5% 30% 60% 5%;
   grid-template-rows: 5% 45% 45% 5%%;
@@ -146,7 +145,6 @@ footer {
 .aboutText{
   color: white;
   font-size: 1.5em;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   align-self: center;
   justify-self: center;
   grid-row-start: 2;
@@ -159,15 +157,15 @@ footer {
   animation: intro 1000ms;
   animation-timing-function: ease-in-out;
   filter: brightness(50%);
+  color: black;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   display: grid;
   grid-template-columns: 20% auto 20%;
   grid-template-rows: 15% auto;
 }
 
 .homeText{
-  color: white;
   font-size: 5.5em;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   justify-self: center;
   align-self: start;
   margin: 0;
@@ -177,9 +175,7 @@ footer {
 }
 
 .homeSubL{
-  color: white;
   font-size: 3em;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
   justify-self: center;
   align-self: center;
   padding-left: 5%;
@@ -188,9 +184,8 @@ footer {
 }
 
 .homeSubR{
-  color: white;
   font-size: 3em;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: black;
   justify-self: center;
   align-self: center;
   padding-right: 5%;
